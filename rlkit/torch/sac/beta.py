@@ -4,10 +4,10 @@ import numpy as np
 import torch.optim as optim
 from torch import nn as nn
 import torch
-import rlkit.rltorch.pytorch_util as ptu
+import rlkit.torch.pytorch_util as ptu
 from rlkit.core.eval_util import create_stats_ordered_dict
-from rlkit.rltorch.torch_rl_algorithm import TorchRLAlgorithm
-from rlkit.rltorch.sac.policies import MakeDeterministic
+from rlkit.torch.torch_rl_algorithm import TorchRLAlgorithm
+from rlkit.torch.sac.policies import MakeDeterministic
 from rlkit.core import eval_util, logger
 
 

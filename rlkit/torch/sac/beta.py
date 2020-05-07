@@ -41,12 +41,8 @@ class BetaVirel(TorchTrainer):
             eval_policy = MakeDeterministic(policy)
         else:
             eval_policy = policy
-        super().__init__(
-            env=env,
-            exploration_policy=policy,
-            eval_policy=eval_policy,
-            **kwargs
-        )
+        super().__init__()
+        self.env = env
         self.beta = 1.0
         self.beta_scale = beta_scale
         print("THE VALUE GOT IN IS ",self.beta_scale," ", self.beta_scale>0)

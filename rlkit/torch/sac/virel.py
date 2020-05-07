@@ -39,12 +39,8 @@ class Virel(TorchTrainer):
             eval_policy = MakeDeterministic(policy)
         else:
             eval_policy = policy
-        super().__init__(
-            env=env,
-            exploration_policy=policy,
-            eval_policy=eval_policy,
-            **kwargs
-        )
+        super().__init__()
+        self.env = env
         self.beta = 1.0
         self.beta_batch_size = 4096
         self.policy = policy

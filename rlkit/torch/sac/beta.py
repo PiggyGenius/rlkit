@@ -6,13 +6,13 @@ from torch import nn as nn
 import torch
 import rlkit.torch.pytorch_util as ptu
 from rlkit.core.eval_util import create_stats_ordered_dict
-from rlkit.torch.torch_rl_algorithm import TorchRLAlgorithm
+from rlkit.torch.torch_rl_algorithm import TorchTrainer
 from rlkit.torch.sac.policies import MakeDeterministic
 from rlkit.core import eval_util, logger
 
 
 
-class BetaVirel(TorchRLAlgorithm):
+class BetaVirel(TorchTrainer):
     def __init__(
             self,
             env,

@@ -67,7 +67,7 @@ class Virel(TorchTrainer):
                 lr=policy_lr,
             )
 
-        self.target_vf = vf.copy()
+        self.target_vf = vf.clone()
         self.qf_criterion = nn.MSELoss()
         self.vf_criterion = nn.MSELoss()
 

@@ -110,7 +110,7 @@ class BetaVirel(TorchTrainer):
 
         logger.record_tabular("beta", ptu.FloatTensor([self.beta])[0].item())
 
-    def _do_training(self):
+    def train_from_torch(self):
         self._update_beta()
         batch = self.get_batch()
         rewards = batch['rewards']

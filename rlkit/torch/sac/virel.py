@@ -104,7 +104,7 @@ class Virel(TorchTrainer):
         else:
             self.beta = 1.0
 
-    def _do_training(self):
+    def train_from_torch(self):
         batch = self.get_batch()
         rewards = batch['rewards']
         terminals = batch['terminals']
